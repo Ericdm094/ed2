@@ -51,17 +51,19 @@ void arv_libera(Arv* a){
     free(a);
 }
 
-static int aux(ArvNo* r){
-    if(r->info %2 == 0){
-        return 1 + aux()
+static int verifica(ArvNo* r) {
+    if(r != NULL) {
+        if(r->info % 2 == 0){
+            return 1 + verifica(r->esq) + verifica(r->dir);
+        }
     }
 }
 
-int pares (Arv* a){
-    if (a != NULL){
-        return aux(a->raiz);
-    }
+int pares(Arv* a){
+    return verifica(a->raiz);
 }
+
+
 
 
 

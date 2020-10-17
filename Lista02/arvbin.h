@@ -11,4 +11,6 @@ void arv_libera(Arv* a);
 
 int pares (Arv* a);
 
-#endif // ARVBIN_H_INCLUDED
+Arv* copia (Arv* a);
+
+#endif

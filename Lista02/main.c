@@ -13,7 +13,7 @@ int main(){
 
     Arv* arv = arv_cria(oito);
 
-    printf("%d", pares(arv));
+    printf("%d pares foram encontrados.", pares(arv));
 
     arv_libera(arv);
     return 0;
