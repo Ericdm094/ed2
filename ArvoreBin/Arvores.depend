@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1602895614 source:c:\users\heltonphg\desktop\estudo\arvores\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arv.h"
+
+1602895996 source:c:\users\heltonphg\desktop\estudo\arvores\funtions.c
+	<stdio.h>
+	<stdlib.h>
+	"arv.h"
+
+1602888509 c:\users\heltonphg\desktop\estudo\arvores\arv.h
+
