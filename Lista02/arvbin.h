@@ -8,6 +8,7 @@ typedef struct arvno ArvNo;
 Arv* arv_cria(ArvNo* r);
 ArvNo* arv_criano(int v, ArvNo* esq, ArvNo* dir);
 void arv_libera(Arv* a);
+void arv_imprime(Arv* a);
 
 int pares (Arv* a);
 

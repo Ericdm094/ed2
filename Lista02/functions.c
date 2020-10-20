@@ -55,6 +55,8 @@ static int verifica(ArvNo* r) {
     if(r != NULL) {
         if(r->info % 2 == 0){
             return 1 + verifica(r->esq) + verifica(r->dir);
+        }else{
+            return 0 + verifica(r->esq) + verifica(r->dir);
         }
     }
 }
@@ -62,6 +64,49 @@ static int verifica(ArvNo* r) {
 int pares(Arv* a){
     return verifica(a->raiz);
 }
+
+static void imprime(ArvNo* r) {
+    printf("<");
+    if(r != NULL) {
+        printf("%d", r->info);
+        imprime(r->esq);
+        imprime(r->dir);
+    }
+    printf(">");
+}
+
+void arv_imprime(Arv* a){
+    imprime(a->raiz);
+}
+
+
+static ArvNo* copyTree(ArvNo* r){
+    if(r == NULL){
+        return NULL;
+    }
+
+    ArvNo* b = (ArvNo*) malloc(sizeof(ArvNo));
+    if(b == NULL) {
+        printf("Memoria insuficiente.\n");
+        exit(1);
+    }
+
+    b->info = r->info;
+    b->esq = copyTree(r->esq);
+    b->dir = copyTree(r->dir);
+    return b;
+}
+
+Arv* copia (Arv* a){
+    Arv* b1 = (Arv*) malloc(sizeof(Arv));
+    if(b1 == NULL) {
+        printf("Memoria insuficiente.\n");
+        exit(1);
+    }
+    b1->raiz = copyTree(a->raiz);
+    return b1;
+}
+
 
 
 

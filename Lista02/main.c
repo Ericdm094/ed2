@@ -3,18 +3,23 @@
 #include "arvbin.h"
 
 int main(){
-    ArvNo* um = arv_criano(1, NULL, NULL);
-    ArvNo* seis = arv_criano(6, NULL, NULL);
-    ArvNo* tres = arv_criano(3, um, seis);
-    ArvNo* qua = arv_criano(14, NULL, NULL);
-    ArvNo* dez = arv_criano(10, NULL, qua);
+    ArvNo* tres = arv_criano(3, NULL, NULL);
+    ArvNo* quatro = arv_criano(4, NULL, NULL);
+    ArvNo* cinco = arv_criano(5, NULL, NULL);
+    ArvNo* dois = arv_criano(2, quatro, cinco);
+    ArvNo* um = arv_criano(1, dois, tres);
 
-    ArvNo* oito = arv_criano(8, tres, dez);
+    Arv* arv = arv_cria(um);
+    Arv* cop = copia(arv);
 
-    Arv* arv = arv_cria(oito);
+    printf("%d pares foram encontrados.\n", pares(arv));
 
-    printf("%d pares foram encontrados.", pares(arv));
-
+    printf("#Arvore original#\n");
+    arv_imprime(arv);
     arv_libera(arv);
+    printf("\n#Arvore copia#\n");
+    arv_imprime(cop);
+    arv_libera(cop);
+
     return 0;
 }
