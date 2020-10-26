@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1603754412 source:c:\users\heltonphg\desktop\c\estrutura 2\lista03\main.c
+	<stdio.h>
+	<stdlib.h>
+	"arvbin.h"
+
+1603752710 c:\users\heltonphg\desktop\c\estrutura 2\lista03\arvbin.h
+
+1603754611 source:c:\users\heltonphg\desktop\c\estrutura 2\lista03\functions.c
+	<stdio.h>
+	<stdlib.h>
+	"arvbin.h"
+	<string.h>
+
