@@ -12,11 +12,11 @@ int main()
 
     arv_imprime(raiz);
 
-    float media = aa_media(raiz, "Eric");
-    if(media != 0){
+    float media = aa_media(raiz, "Helton");
+    if(media >= 0){
         printf("\nMedia = %.1f\n", media);
     }else{
-        printf("\n Aluno nao encontrado!\n");
+        printf("\naluno nao encontrado!.\n");
     }
 
     aa_retira(raiz, "Pedro");

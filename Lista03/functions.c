@@ -104,8 +104,10 @@ float aa_media (Arv* a, char* nome){
     if(no_aluno != NULL){
         media = (no_aluno->info->p1 + no_aluno->info->p2 + no_aluno->info->p3)/3;
         return media;
+    }else{
+        return -1;
     }
-    return 0;
+
 }
 
 void aa_retira (Arv* a, char* nome){
